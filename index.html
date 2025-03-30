@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ... (keep all existing head content exactly the same) ... -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KrishiMitra - AI for Indian Farmers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-green: #2e8b57;
+      --secondary-green: #3aa76d;
+      --light-green: #e8f5e9;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #75c777;
+    }
+    .navbar {
+      background-color: var(--primary-green) !important;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .hero-section {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                  url('https://www.shutterstock.com/image-photo/lush-rice-paddy-field-neat-260nw-2499404003.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 120px 0;
+    }
+    .feature-card {
+      transition: all 0.3s ease;
+      border-radius: 10px;
+      overflow: hidden;
+      border: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    .affordability-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #ff6b6b;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .solution-section {
+      background-color: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .challenge-card {
+      border-left: 5px solid var(--primary-green);
+      background-color: var(--light-green);
+    }
+    .footer {
+      background-color: #222;
+      color: white;
+    }
+    .language-selector .btn {
+      border: 1px solid white;
+      color: white;
+    }
+    .lang-placeholder::placeholder {
+      color: #6c757d;
+      opacity: 1;
+    }
+  </style>
+
+</head>
+<body>
+  <!-- ... (keep all existing HTML content until the Login Modal) ... -->
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="fas fa-leaf me-2"></i><span class="lang-brand">KrishiMitra</span>
+      </a>
+      <div class="d-flex align-items-center">
+        <div class="language-selector me-3">
+          <div class="btn-group">
+            <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              <i class="fas fa-language me-1"></i> <span class="lang-current">English</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="hi">हिन्दी</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="kn">ಕನ್ನಡ</a></li>
+            </ul>
+          </div>
+        </div>
+        <button class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#loginModal">
+          <i class="fas fa-sign-in-alt me-1"></i> <span class="lang-login">Farmer Login</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-4 lang-hero-title">Precision Agriculture for Smallholder Farmers</h1>
+      <p class="lead mb-5 lang-hero-subtitle">AI-powered insights to optimize irrigation, fertilizers and pesticides using satellite data</p>
+      <div class="d-flex justify-content-center gap-3">
+        <button class="btn btn-success btn-lg px-4" data-bs-toggle="modal" data-bs-target="#registerModal">
+          <i class="fas fa-user-plus me-2"></i> <span class="lang-register-btn">Register Free</span>
+        </button>
+        <button class="btn btn-outline-light btn-lg px-4">
+          <i class="fas fa-play me-2"></i> <span class="lang-demo-btn">How It Works</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenges Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold lang-challenges-title">Challenges We Address</h2>
+        <p class="text-muted lang-challenges-subtitle">Overcoming barriers to technology adoption in Indian agriculture</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 challenge-card p-3">
+            <div class="card-body">
+              <div class="d-flex mb-3">
+                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                  <i class="fas fa-chart-line text-primary"></i>
+                  <a href="https://coin.fao.org/coin-static/cms/media/9/13170962616430/2002_03_high.pdf">Data Interpretation</a>
+                
+
+                </div>
+                <h5 class="card-title mb-0 lang-challenge1-title">Data Interpretation</h5>
+              </div>
+              <p class="card-text text-muted lang-challenge1-desc">Complex satellite data made simple with AI-powered visualizations and actionable alerts in local languages</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 challenge-card p-3">
+            <div class="card-body">
+              <div class="d-flex mb-3">
+                <div class="bg-success bg-opacity-10 p-2 rounded me-3">
+                  <i class="fas fa-mobile-alt text-success"></i>
+                  <a href="https://www.mdpi.com/2071-1050/12/9/3751">Accessibility</a>
+                </div>
+                <h5 class="card-title mb-0 lang-challenge2-title">Accessibility</h5>
+              </div>
+              <p class="card-text text-muted lang-challenge2-desc">Works on basic smartphones via SMS/WhatsApp with low-bandwidth optimization for rural areas</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 challenge-card p-3">
+            <div class="card-body">
+              <div class="d-flex mb-3">
+                <div class="bg-warning bg-opacity-10 p-2 rounded me-3">
+                  <i class="fas fa-rupee-sign text-warning"></i>
+                  <a href="https://www.sciencedirect.com/science/article/pii/S0301479724025222">Affordability</a>
+                </div>
+                <h5 class="card-title mb-0 lang-challenge3-title">Affordability</h5>
+              </div>
+              <p class="card-text text-muted lang-challenge3-desc">Free basic service with premium features at 1/10th cost of commercial solutions through government partnerships</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Features -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold lang-solutions-title">Our AI-Powered Solutions</h2>
+        <p class="text-muted lang-solutions-subtitle">Delivering hyper-local insights for Indian farming conditions</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 feature-card">
+            <div class="position-relative">
+              <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" class="card-img-top" alt="Smart Irrigation">
+              <div class="affordability-badge lang-irrigation-badge">Saves 30% Water</div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title lang-irrigation-title">Precision Irrigation</h5>
+              <p class="card-text text-muted lang-irrigation-desc">AI analyzes soil moisture from satellites and weather forecasts to recommend optimal watering schedules</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check-circle text-success me-2"></i> <span class="lang-irrigation-benefit1">Reduces water waste</span></li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> <span class="lang-irrigation-benefit2">Prevents over/under watering</span></li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> <span class="lang-irrigation-benefit3">Adapts to monsoon patterns</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 feature-card">
+            <div class="position-relative">
+              <img src="img1.jpeg.jpg" class="card-img-top" alt="Fertilizer Optimization">
+              <div class="affordability-badge lang-fertilizer-badge">Saves ₹2000/acre</div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title lang-fertilizer-title">Fertilizer Optimization</h5>
+              <p class="card-text text-muted lang-fertilizer-desc">Machine learning recommends exact NPK ratios based on soil tests and crop growth stage</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check-circle text-success me-2"></i> <span class="lang-fertilizer-benefit1">Reduces input costs</span></li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> <span class="lang-fertilizer-benefit2">Prevents soil degradation</span></li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> <span class="lang-fertilizer-benefit3">Timing based on weather</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 feature-card">
+            <div class="position-relative">
+              <img src="https://cipotato.org/wp-content/uploads/2020/03/Phone-App-2-PUT.jpg" class="card-img-top" alt="Pest Detection">
+              <div class="affordability-badge lang-pest-badge">Early Alerts</div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title lang-pest-title">Pest & Disease Detection</h5>
+              <p class="card-text text-muted lang-pest-desc">Computer vision identifies threats from field photos and satellite vegetation indices</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check-circle text-success me-2"></i> <span class="lang-pest-benefit1">7-day early warning</span></li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> <span class="lang-pest-benefit2">Organic treatment options</span></li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> <span class="lang-pest-benefit3">Location-specific advice</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-4 lang-howitworks-title">How KrishiMitra Works</h2>
+          <div class="d-flex mb-4">
+            <div class="me-4">
+              <div class="bg-primary bg-opacity-10 p-3 rounded-circle d-inline-flex mb-2">
+                <span class="text-primary fw-bold">1</span>
+              </div>
+            </div>
+            <div>
+              <h5 class="lang-step1-title">Satellite Data Collection</h5>
+              <p class="text-muted lang-step1-desc">Daily updates from ISRO Bhuvan, Sentinel-2 and NASA satellites for vegetation indices, soil moisture</p>
+            </div>
+          </div>
+          <div class="d-flex mb-4">
+            <div class="me-4">
+              <div class="bg-primary bg-opacity-10 p-3 rounded-circle d-inline-flex mb-2">
+                <span class="text-primary fw-bold">2</span>
+              </div>
+            </div>
+            <div>
+              <h5 class="lang-step2-title">AI Processing</h5>
+              <p class="text-muted lang-step2-desc">Machine learning models analyze data with farmer inputs to generate personalized recommendations</p>
+            </div>
+          </div>
+          <div class="d-flex">
+            <div class="me-4">
+              <div class="bg-primary bg-opacity-10 p-3 rounded-circle d-inline-flex mb-2">
+                <span class="text-primary fw-bold">3</span>
+              </div>
+            </div>
+            <div>
+              <h5 class="lang-step3-title">Farmer Delivery</h5>
+              <p class="text-muted lang-step3-desc">Actionable alerts via SMS/WhatsApp in local language with simple instructions</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="img-fluid rounded shadow" alt="Farmer using phone">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Metrics -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold lang-impact-title">Proven Impact for Indian Farmers</h2>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-3">
+          <div class="display-4 fw-bold text-success">30%</div>
+          <p class="text-muted lang-impact1">Water Savings</p>
+        </div>
+        <div class="col-md-3">
+          <div class="display-4 fw-bold text-success">20-35%</div>
+          <p class="text-muted lang-impact2">Yield Increase</p>
+        </div>
+        <div class="col-md-3">
+          <div class="display-4 fw-bold text-success">40%</div>
+          <p class="text-muted lang-impact3">Reduced Input Costs</p>
+        </div>
+        <div class="col-md-3">
+          <div class="display-4 fw-bold text-success">10M+</div>
+          <p class="text-muted lang-impact4">Farmers Served</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold lang-testimonials-title">What Farmers Say</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="mb-3">
+                <i class="fas fa-quote-left text-muted"></i>
+              </div>
+              <p class="card-text lang-testimonial1">"KrishiMitra's SMS alerts helped me reduce fertilizer use by 25% while increasing my wheat yield"</p>
+              <div class="d-flex align-items-center">
+                <img src="https://img.freepik.com/premium-photo/indian-farmer-cotton-field_54391-2206.jpg?w=2000" class="rounded-circle me-3" width="50" alt="Farmer">
+                <div>
+                  <h6 class="mb-0">Rajesh Kumar</h6>
+                  <small class="text-muted lang-farmer1">Wheat Farmer, Punjab</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="mb-3">
+                <i class="fas fa-quote-left text-muted"></i>
+              </div>
+              <p class="card-text lang-testimonial2">"The pest warnings came 10 days before I noticed anything in my cotton field. Saved my crop!"</p>
+              <div class="d-flex align-items-center">
+                <img src="https://www.shutterstock.com/image-photo/happy-indian-woman-chickpea-field-260nw-2315181317.jpg" class="rounded-circle me-3" width="50" alt="Farmer">
+                <div>
+                  <h6 class="mb-0">Sunita Patil</h6>
+                  <small class="text-muted lang-farmer2">Cotton Farmer, Maharashtra</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="mb-3">
+                <i class="fas fa-quote-left text-muted"></i>
+              </div>
+              <p class="card-text lang-testimonial3">"Even with my basic phone, I get Kannada messages telling me exactly when to water my areca plants"</p>
+              <div class="d-flex align-items-center">
+                <img src="https://t3.ftcdn.net/jpg/03/26/96/04/360_F_326960484_ctiFXRqXe4a1XBbRmOI0bvD0otDqgk49.jpg" class="rounded-circle me-3" width="50" alt="Farmer">
+                <div>
+                  <h6 class="mb-0">Gopala Reddy</h6>
+                  <small class="text-muted lang-farmer3">Areca Farmer, Karnataka</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-5 bg-success text-white">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4 lang-cta-title">Ready to Transform Your Farming?</h2>
+      <p class="lead mb-5 lang-cta-subtitle">Join 50,000+ Indian farmers using AI for better yields and lower costs</p>
+      <button class="btn btn-light btn-lg px-5 me-3" data-bs-toggle="modal" data-bs-target="#registerModal">
+        <i class="fas fa-user-plus me-2"></i> <span class="lang-cta-register">Register Now</span>
+      </button>
+      <button class="btn btn-outline-light btn-lg px-5">
+        <i class="fas fa-phone-alt me-2"></i> <span class="lang-cta-call">Call Us: 1800-123-4567</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h5 class="text-white mb-4">
+            <i class="fas fa-leaf me-2"></i> <span class="lang-footer-brand">KrishiMitra</span>
+          </h5>
+          <p class="lang-footer-desc">AI-powered precision agriculture platform for smallholder farmers in India</p>
+          <div class="mt-4">
+            <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5 class="text-white mb-4 lang-footer-solutions">Solutions</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none lang-footer-sol1">Smart Irrigation</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none lang-footer-sol2">Fertilizer Optimization</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none lang-footer-sol3">Pest Detection</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none lang-footer-sol4">Crop Health</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5 class="text-white mb-4 lang-footer-crops">Crops</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none lang-footer-crop1">Rice</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none lang-footer-crop2">Wheat</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none lang-footer-crop3">Cotton</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none lang-footer-crop4">Areca</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <h5 class="text-white mb-4 lang-footer-contact">Contact Us</h5>
+          <p><i class="fas fa-map-marker-alt me-2"></i> <span class="lang-footer-address">Bengaluru, Karnataka</span></p>
+          <p><i class="fas fa-phone-alt me-2"></i> <span class="lang-footer-phone">1800-123-4567 (Toll Free)</span></p>
+          <p><i class="fas fa-envelope me-2"></i> support@krishimitra.in</p>
+        </div>
+      </div>
+      <hr class="my-4 bg-secondary">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-0 lang-footer-copyright">&copy; 2025 KrishiMitra. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="#" class="text-white text-decoration-none me-3 lang-footer-privacy">Privacy Policy</a>
+          <a href="#" class="text-white text-decoration-none lang-footer-terms">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Login Modal - Updated Version -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title lang-modal-login-title">Farmer Login</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="loginMobile" class="form-label lang-modal-mobile">Mobile Number</label>
+              <div class="input-group">
+                <span class="input-group-text">+91</span>
+                <input type="tel" class="form-control lang-placeholder" id="loginMobile" placeholder="9876543210" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label lang-modal-password">Password</label>
+              <input type="password" class="form-control" id="loginPassword" required>
+            </div>
+            
+            <!-- Error message display -->
+            <div id="loginError" class="alert alert-danger mb-3" style="display: none;"></div>
+            
+            <div class="d-grid">
+              <button type="submit" class="btn btn-success" id="loginButton">
+                <i class="fas fa-sign-in-alt me-2"></i> 
+                <span class="lang-modal-login-btn">Login</span>
+                <span id="loginSpinner" class="spinner-border spinner-border-sm ms-2" style="display: none;"></span>
+              </button>
+            </div>
+            <div class="text-center mt-3">
+              <a href="#" class="text-decoration-none lang-modal-forgot">Forgot Password?</a>
+              <p class="mt-2 lang-modal-noaccount">New to KrishiMitra? <a href="#" class="text-success fw-bold" data-bs-toggle="modal" data-bs-target="#registerModal" class="lang-modal-register-link">Register Here</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ... (keep all remaining HTML content exactly the same until the scripts) ... -->
+  <!-- Registration Modal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title lang-modal-register-title">New Farmer Registration</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="regName" class="form-label lang-modal-name">Full Name</label>
+              <input type="text" class="form-control lang-placeholder" id="regName" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+              <label for="regMobile" class="form-label lang-modal-mobile">Mobile Number</label>
+              <div class="input-group">
+                <span class="input-group-text">+91</span>
+                <input type="tel" class="form-control lang-placeholder" id="regMobile" placeholder="9876543210">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="regState" class="form-label lang-modal-state">State</label>
+              <select class="form-select" id="regState">
+                <option value="" class="lang-modal-select-state">Select State</option>
+                <option value="KA" class="lang-state-ka">Karnataka</option>
+                <option value="MH" class="lang-state-mh">Maharashtra</option>
+                <option value="PB" class="lang-state-pb">Punjab</option>
+                <option value="UP" class="lang-state-up">Uttar Pradesh</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="regDistrict" class="form-label lang-modal-district">District</label>
+              <input type="text" class="form-control lang-placeholder" id="regDistrict" placeholder="Enter your district">
+            </div>
+            <div class="mb-3">
+              <label for="regCrops" class="form-label lang-modal-crops">Main Crops (Select up to 3)</label>
+              <select multiple class="form-select" id="regCrops">
+                <option value="rice" class="lang-crop-rice">Rice</option>
+                <option value="wheat" class="lang-crop-wheat">Wheat</option>
+                <option value="cotton" class="lang-crop-cotton">Cotton</option>
+                <option value="areca" class="lang-crop-areca">Areca</option>
+                <option value="sugarcane" class="lang-crop-sugarcane">Sugarcane</option>
+              </select>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-success">
+                <i class="fas fa-user-plus me-2"></i> <span class="lang-modal-register-btn">Register Now</span>
+              </button>
+            </div>
+            <p class="text-muted small mt-3 lang-modal-terms">By registering, you agree to our Terms of Service and Privacy Policy</p>
+            <p class="text-center mt-2 lang-modal-haveaccount">Already have an account? <a href="#" class="text-success fw-bold" data-bs-toggle="modal" data-bs-target="#loginModal" class="lang-modal-login-link">Login here</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Add this right before the existing translation script -->
+  <script>
+    // Login Form Handling
+    document.getElementById('loginForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      // Show loading spinner
+      const loginButton = document.getElementById('loginButton');
+      const loginSpinner = document.getElementById('loginSpinner');
+      const errorElement = document.getElementById('loginError');
+      
+      loginSpinner.style.display = 'inline-block';
+      loginButton.disabled = true;
+      errorElement.style.display = 'none';
+      
+      const loginData = {
+        mobile: document.getElementById('loginMobile').value,
+        password: document.getElementById('loginPassword').value
+      };
+
+      try {
+        const response = await fetch('http://localhost:5500/api/login', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(loginData)
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          // Success - close modal and redirect
+          bootstrap.Modal.getInstance(document.getElementById('loginModal')).hide();
+          
+          // Show success toast (add this HTML if you don't have it)
+          const toast = new bootstrap.Toast(document.getElementById('loginToast'));
+          toast.show();
+          
+          // Optional: Redirect after delay
+          setTimeout(() => {
+            window.location.href = 'dashboard.html'; // Change as needed
+          }, 1500);
+        } else {
+          // Show error
+          errorElement.textContent = result.message || 'Login failed. Please try again.';
+          errorElement.style.display = 'block';
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        errorElement.textContent = 'Failed to connect to server. Please try again later.';
+        errorElement.style.display = 'block';
+      } finally {
+        loginSpinner.style.display = 'none';
+        loginButton.disabled = false;
+      }
+    });
+  </script>
+
+  <!-- Add this toast HTML before closing body tag if you want success messages -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="loginToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header bg-success text-white">
+        <strong class="me-auto">Success</strong>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Login successful! Redirecting...
+      </div>
+    </div>
+  </div>
+
+  <!-- Keep your existing translation script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // ... (keep all existing translation script code exactly the same) ...
+    // Complete translation dictionary
+    const translations = {
+      en: {
+        // Navbar & General
+        "brand": "KrishiMitra",
+        "current": "English",
+        "login": "Farmer Login",
+        
+        // Hero Section
+        "hero-title": "Precision Agriculture for Smallholder Farmers",
+        "hero-subtitle": "AI-powered insights to optimize irrigation, fertilizers and pesticides using satellite data",
+        "register-btn": "Register Free",
+        "demo-btn": "How It Works",
+        
+        // Challenges
+        "challenges-title": "Challenges We Address",
+        "challenges-subtitle": "Overcoming barriers to technology adoption in Indian agriculture",
+        "challenge1-title": "Data Interpretation",
+        "challenge1-desc": "Complex satellite data made simple with AI-powered visualizations and actionable alerts in local languages",
+        "challenge2-title": "Accessibility",
+        "challenge2-desc": "Works on basic smartphones via SMS/WhatsApp with low-bandwidth optimization for rural areas",
+        "challenge3-title": "Affordability",
+        "challenge3-desc": "Free basic service with premium features at 1/10th cost of commercial solutions through government partnerships",
+        
+        // Solutions
+        "solutions-title": "Our AI-Powered Solutions",
+        "solutions-subtitle": "Delivering hyper-local insights for Indian farming conditions",
+        "irrigation-title": "Precision Irrigation",
+        "irrigation-desc": "AI analyzes soil moisture from satellites and weather forecasts to recommend optimal watering schedules",
+        "irrigation-badge": "Saves 30% Water",
+        "irrigation-benefit1": "Reduces water waste",
+        "irrigation-benefit2": "Prevents over/under watering",
+        "irrigation-benefit3": "Adapts to monsoon patterns",
+        "fertilizer-title": "Fertilizer Optimization",
+        "fertilizer-desc": "Machine learning recommends exact NPK ratios based on soil tests and crop growth stage",
+        "fertilizer-badge": "Saves ₹2000/acre",
+        "fertilizer-benefit1": "Reduces input costs",
+        "fertilizer-benefit2": "Prevents soil degradation",
+        "fertilizer-benefit3": "Timing based on weather",
+        "pest-title": "Pest & Disease Detection",
+        "pest-desc": "Computer vision identifies threats from field photos and satellite vegetation indices",
+        "pest-badge": "Early Alerts",
+        "pest-benefit1": "7-day early warning",
+        "pest-benefit2": "Organic treatment options",
+        "pest-benefit3": "Location-specific advice",
+        
+        // How It Works
+        "howitworks-title": "How KrishiMitra Works",
+        "step1-title": "Satellite Data Collection",
+        "step1-desc": "Daily updates from ISRO Bhuvan, Sentinel-2 and NASA satellites for vegetation indices, soil moisture",
+        "step2-title": "AI Processing",
+        "step2-desc": "Machine learning models analyze data with farmer inputs to generate personalized recommendations",
+        "step3-title": "Farmer Delivery",
+        "step3-desc": "Actionable alerts via SMS/WhatsApp in local language with simple instructions",
+        
+        // Impact
+        "impact-title": "Proven Impact for Indian Farmers",
+        "impact1": "Water Savings",
+        "impact2": "Yield Increase",
+        "impact3": "Reduced Input Costs",
+        "impact4": "Farmers Served",
+        
+        // Testimonials
+        "testimonials-title": "What Farmers Say",
+        "testimonial1": "\"KrishiMitra's SMS alerts helped me reduce fertilizer use by 25% while increasing my wheat yield\"",
+        "farmer1": "Wheat Farmer, Punjab",
+        "testimonial2": "\"The pest warnings came 10 days before I noticed anything in my cotton field. Saved my crop!\"",
+        "farmer2": "Cotton Farmer, Maharashtra",
+        "testimonial3": "\"Even with my basic phone, I get Kannada messages telling me exactly when to water my areca plants\"",
+        "farmer3": "Areca Farmer, Karnataka",
+        
+        // CTA
+        "cta-title": "Ready to Transform Your Farming?",
+        "cta-subtitle": "Join 50,000+ Indian farmers using AI for better yields and lower costs",
+        "cta-register": "Register Now",
+        "cta-call": "Call Us: 1800-123-4567",
+        
+        // Footer
+        "footer-brand": "KrishiMitra",
+        "footer-desc": "AI-powered precision agriculture platform for smallholder farmers in India",
+        "footer-solutions": "Solutions",
+        "footer-sol1": "Smart Irrigation",
+        "footer-sol2": "Fertilizer Optimization",
+        "footer-sol3": "Pest Detection",
+        "footer-sol4": "Crop Health",
+        "footer-crops": "Crops",
+        "footer-crop1": "Rice",
+        "footer-crop2": "Wheat",
+        "footer-crop3": "Cotton",
+        "footer-crop4": "Areca",
+        "footer-contact": "Contact Us",
+        "footer-address": "Bengaluru, Karnataka",
+        "footer-phone": "1800-123-4567 (Toll Free)",
+        "footer-copyright": "© 2023 KrishiMitra. All rights reserved.",
+        "footer-privacy": "Privacy Policy",
+        "footer-terms": "Terms of Service",
+        
+        // Login Modal
+        "modal-login-title": "Farmer Login",
+        "modal-mobile": "Mobile Number",
+        "modal-password": "Password",
+        "modal-login-btn": "Login",
+        "modal-forgot": "Forgot Password?",
+        "modal-noaccount": "New to KrishiMitra?",
+        "modal-register-link": "Register Here",
+        
+        // Registration Modal
+        "modal-register-title": "New Farmer Registration",
+        "modal-name": "Full Name",
+        "modal-state": "State",
+        "modal-select-state": "Select State",
+        "state-ka": "Karnataka",
+        "state-mh": "Maharashtra",
+        "state-pb": "Punjab",
+        "state-up": "Uttar Pradesh",
+        "modal-district": "District",
+        "modal-crops": "Main Crops (Select up to 3)",
+        "crop-rice": "Rice",
+        "crop-wheat": "Wheat",
+        "crop-cotton": "Cotton",
+        "crop-areca": "Areca",
+        "crop-sugarcane": "Sugarcane",
+        "modal-register-btn": "Register Now",
+        "modal-terms": "By registering, you agree to our Terms of Service and Privacy Policy",
+        "modal-haveaccount": "Already have an account?",
+        "modal-login-link": "Login here"
+      },
+      hi: {
+        // Navbar & General
+        "brand": "कृषिमित्र",
+        "current": "हिन्दी",
+        "login": "किसान लॉगिन",
+        
+        // Hero Section
+        "hero-title": "छोटे किसानों के लिए सटीक कृषि",
+        "hero-subtitle": "उपग्रह डेटा का उपयोग करके सिंचाई, उर्वरकों और कीटनाशकों को अनुकूलित करने के लिए AI-संचालित अंतर्दृष्टि",
+        "register-btn": "मुफ्त पंजीकरण",
+        "demo-btn": "यह कैसे काम करता है",
+        
+        // Challenges
+        "challenges-title": "चुनौतियाँ जिन्हें हम संबोधित करते हैं",
+        "challenges-subtitle": "भारतीय कृषि में प्रौद्योगिकी अपनाने की बाधाओं को दूर करना",
+        "challenge1-title": "डेटा व्याख्या",
+        "challenge1-desc": "AI-संचालित विज़ुअलाइज़ेशन और स्थानीय भाषाओं में कार्रवाई योग्य अलर्ट के साथ जटिल उपग्रह डेटा को सरल बनाया गया",
+        "challenge2-title": "सुलभता",
+        "challenge2-desc": "ग्रामीण क्षेत्रों के लिए कम बैंडविड्थ अनुकूलन के साथ एसएमएस/व्हाट्सएप के माध्यम से बेसिक स्मार्टफोन पर काम करता है",
+        "challenge3-title": "सामर्थ्य",
+        "challenge3-desc": "सरकारी भागीदारी के माध्यम से वाणिज्यिक समाधानों की लागत का 1/10वां हिस्सा में प्रीमियम सुविधाओं के साथ मुफ्त बेसिक सेवा",
+        
+        // Solutions
+        "solutions-title": "हमारे AI-संचालित समाधान",
+        "solutions-subtitle": "भारतीय कृषि परिस्थितियों के लिए हाइपर-लोकल अंतर्दृष्टि प्रदान करना",
+        "irrigation-title": "सटीक सिंचाई",
+        "irrigation-desc": "AI उपग्रहों और मौसम पूर्वानुमानों से मिट्टी की नमी का विश्लेषण करके इष्टतम जल भरने की अनुसूची की सिफारिश करता है",
+        "irrigation-badge": "30% पानी की बचत",
+        "irrigation-benefit1": "पानी की बर्बादी कम करता है",
+        "irrigation-benefit2": "अधिक/कम पानी देने से रोकता है",
+        "irrigation-benefit3": "मानसून पैटर्न के अनुकूल होता है",
+        "fertilizer-title": "उर्वरक अनुकूलन",
+        "fertilizer-desc": "मशीन लर्निंग मिट्टी परीक्षणों और फसल विकास चरण के आधार पर सटीक NPK अनुपात की सिफारिश करता है",
+        "fertilizer-badge": "₹2000/एकड़ बचत",
+        "fertilizer-benefit1": "इनपुट लागत कम करता है",
+        "fertilizer-benefit2": "मिट्टी के क्षरण को रोकता है",
+        "fertilizer-benefit3": "मौसम के आधार पर समय",
+        "pest-title": "कीट और रोग पहचान",
+        "pest-desc": "कंप्यूटर विजन फील्ड फोटो और उपग्रह वनस्पति सूचकांकों से खतरों की पहचान करता है",
+        "pest-badge": "प्रारंभिक चेतावनी",
+        "pest-benefit1": "7-दिन पहले चेतावनी",
+        "pest-benefit2": "जैविक उपचार विकल्प",
+        "pest-benefit3": "स्थान-विशिष्ट सलाह",
+        
+        // How It Works
+        "howitworks-title": "कृषिमित्र कैसे काम करता है",
+        "step1-title": "उपग्रह डेटा संग्रह",
+        "step1-desc": "ISRO भुवन, सेंटिनल-2 और NASA उपग्रहों से वनस्पति सूचकांक, मिट्टी की नमी के लिए दैनिक अपडेट",
+        "step2-title": "AI प्रसंस्करण",
+        "step2-desc": "मशीन लर्निंग मॉडल किसान इनपुट के साथ डेटा का विश्लेषण करके व्यक्तिगत सिफारिशें उत्पन्न करते हैं",
+        "step3-title": "किसान वितरण",
+        "step3-desc": "स्थानीय भाषा में सरल निर्देशों के साथ एसएमएस/व्हाट्सएप के माध्यम से कार्रवाई योग्य अलर्ट",
+        
+        // Impact
+        "impact-title": "भारतीय किसानों के लिए सिद्ध प्रभाव",
+        "impact1": "पानी की बचत",
+        "impact2": "उपज में वृद्धि",
+        "impact3": "इनपुट लागत में कमी",
+        "impact4": "किसानों को सेवा प्रदान की",
+        
+        // Testimonials
+        "testimonials-title": "किसान क्या कहते हैं",
+        "testimonial1": "\"कृषिमित्र के एसएमएस अलर्ट ने मुझे उर्वरक उपयोग 25% कम करने में मदद की जबकि मेरी गेहूं की उपज बढ़ाई\"",
+        "farmer1": "गेहूं किसान, पंजाब",
+        "testimonial2": "\"कीट चेतावनियाँ मेरे कपास के खेत में कुछ भी नोटिस करने से 10 दिन पहले आईं। मेरी फसल बच गई!\"",
+        "farmer2": "कपास किसान, महाराष्ट्र",
+        "testimonial3": "\"मेरे बेसिक फोन के साथ भी, मुझे कन्नड़ संदेश मिलते हैं जो मुझे बताते हैं कि मेरे सुपारी के पौधों को कब पानी देना है\"",
+        "farmer3": "सुपारी किसान, कर्नाटक",
+        
+        // CTA
+        "cta-title": "अपनी खेती को बदलने के लिए तैयार हैं?",
+        "cta-subtitle": "50,000+ भारतीय किसानों में शामिल हों जो बेहतर उपज और कम लागत के लिए AI का उपयोग कर रहे हैं",
+        "cta-register": "अभी पंजीकरण करें",
+        "cta-call": "हमें कॉल करें: 1800-123-4567",
+        
+        // Footer
+        "footer-brand": "कृषिमित्र",
+        "footer-desc": "भारत में छोटे किसानों के लिए AI-संचालित सटीक कृषि मंच",
+        "footer-solutions": "समाधान",
+        "footer-sol1": "सटीक सिंचाई",
+        "footer-sol2": "उर्वरक अनुकूलन",
+        "footer-sol3": "कीट पहचान",
+        "footer-sol4": "फसल स्वास्थ्य",
+        "footer-crops": "फसलें",
+        "footer-crop1": "चावल",
+        "footer-crop2": "गेहूं",
+        "footer-crop3": "कपास",
+        "footer-crop4": "सुपारी",
+        "footer-contact": "हमसे संपर्क करें",
+        "footer-address": "बेंगलुरु, कर्नाटक",
+        "footer-phone": "1800-123-4567 (टोल फ्री)",
+        "footer-copyright": "© 2023 कृषिमित्र. सर्वाधिकार सुरक्षित।",
+        "footer-privacy": "गोपनीयता नीति",
+        "footer-terms": "सेवा की शर्तें",
+        
+        // Login Modal
+        "modal-login-title": "किसान लॉगिन",
+        "modal-mobile": "मोबाइल नंबर",
+        "modal-password": "पासवर्ड",
+        "modal-login-btn": "लॉगिन",
+        "modal-forgot": "पासवर्ड भूल गए?",
+        "modal-noaccount": "कृषिमित्र में नए हैं?",
+        "modal-register-link": "यहां पंजीकरण करें",
+        
+        // Registration Modal
+        "modal-register-title": "नया किसान पंजीकरण",
+        "modal-name": "पूरा नाम",
+        "modal-state": "राज्य",
+        "modal-select-state": "राज्य चुनें",
+        "state-ka": "कर्नाटक",
+        "state-mh": "महाराष्ट्र",
+        "state-pb": "पंजाब",
+        "state-up": "उत्तर प्रदेश",
+        "modal-district": "जिला",
+        "modal-crops": "मुख्य फसलें (अधिकतम 3 चुनें)",
+        "crop-rice": "चावल",
+        "crop-wheat": "गेहूं",
+        "crop-cotton": "कपास",
+        "crop-areca": "सुपारी",
+        "crop-sugarcane": "गन्ना",
+        "modal-register-btn": "अभी पंजीकरण करें",
+        "modal-terms": "पंजीकरण करके, आप हमारी सेवा की शर्तें और गोपनीयता नीति से सहमत होते हैं",
+        "modal-haveaccount": "पहले से ही एक खाता है?",
+        "modal-login-link": "यहां लॉगिन करें"
+      },
+      kn: {
+        // Navbar & General
+        "brand": "ಕೃಷಿಮಿತ್ರ",
+        "current": "ಕನ್ನಡ",
+        "login": "ರೈತ ಲಾಗಿನ್",
+        
+        // Hero Section
+        "hero-title": "ಸಣ್ಣ ರೈತರಿಗೆ ನಿಖರ ಕೃಷಿ",
+        "hero-subtitle": "ಉಪಗ್ರಹ ಡೇಟಾವನ್ನು ಬಳಸಿಕೊಂಡು ನೀರಾವರಿ, ಗೊಬ್ಬರ ಮತ್ತು ಕೀಟನಾಶಕಗಳನ್ನು ಅತ್ಯುತ್ತಮಗೊಳಿಸಲು AI-ಚಾಲಿತ ಒಳನೋಟಗಳು",
+        "register-btn": "ಉಚಿತ ನೋಂದಣಿ",
+        "demo-btn": "ಇದು ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ",
+        
+        // Challenges
+        "challenges-title": "ನಾವು ನಿಭಾಯಿಸುವ ಸವಾಲುಗಳು",
+        "challenges-subtitle": "ಭಾರತೀಯ ಕೃಷಿಯಲ್ಲಿ ತಂತ್ರಜ್ಞಾನ ಅಳವಡಿಕೆಯ ತಡೆಗೋಡೆಗಳನ್ನು ದಾಟುವುದು",
+        "challenge1-title": "ಡೇಟಾ ವ್ಯಾಖ್ಯಾನ",
+        "challenge1-desc": "AI-ಚಾಲಿತ ದೃಶ್ಯೀಕರಣಗಳು ಮತ್ತು ಸ್ಥಳೀಯ ಭಾಷೆಗಳಲ್ಲಿ ಕ್ರಿಯಾತ್ಮಕ ಎಚ್ಚರಿಕೆಗಳೊಂದಿಗೆ ಸಂಕೀರ್ಣ ಉಪಗ್ರಹ ಡೇಟಾವನ್ನು ಸರಳಗೊಳಿಸಲಾಗಿದೆ",
+        "challenge2-title": "ಪ್ರವೇಶಸಾಧ್ಯತೆ",
+        "challenge2-desc": "ಗ್ರಾಮೀಣ ಪ್ರದೇಶಗಳಿಗೆ ಕಡಿಮೆ ಬ್ಯಾಂಡ್ವಿಡ್ತ್ ಅನುಕೂಲಕರತೆಯೊಂದಿಗೆ ಮೂಲ ಸ್ಮಾರ್ಟ್ಫೋನ್ಗಳಲ್ಲಿ SMS/WhatsApp ಮೂಲಕ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ",
+        "challenge3-title": "ಸ affordability ಲಭ್ಯತೆ",
+        "challenge3-desc": "ವಾಣಿಜ್ಯ ಪರಿಹಾರಗಳ ವೆಚ್ಚದ 1/10ರಷ್ಟು ಪ್ರೀಮಿಯಂ ವೈಶಿಷ್ಟ್ಯಗಳೊಂದಿಗೆ ಉಚಿತ ಮೂಲ ಸೇವೆ ಸರ್ಕಾರಿ ಪಾಲುದಾರಿಕೆಗಳ ಮೂಲಕ",
+        
+        // Solutions
+        "solutions-title": "ನಮ್ಮ AI-ಚಾಲಿತ ಪರಿಹಾರಗಳು",
+        "solutions-subtitle": "ಭಾರತೀಯ ಕೃಷಿ ಪರಿಸ್ಥಿತಿಗಳಿಗೆ ಹೈಪರ್-ಲೋಕಲ್ ಒಳನೋಟಗಳನ್ನು ನೀಡುವುದು",
+        "irrigation-title": "ನಿಖರ ನೀರಾವರಿ",
+        "irrigation-desc": "ಉಪಗ್ರಹಗಳು ಮತ್ತು ಹವಾಮಾನ ಪೂರ್ವಾನುಮಾನಗಳಿಂದ ಮಣ್ಣಿನ ತೇವಾಂಶವನ್ನು AI ವಿಶ್ಲೇಷಿಸುತ್ತದೆ ಮತ್ತು ಸೂಕ್ತ ನೀರಿನ ವೇಳಾಪಟ್ಟಿಯನ್ನು ಶಿಫಾರಸು ಮಾಡುತ್ತದೆ",
+        "irrigation-badge": "30% ನೀರಿನ ಉಳಿತಾಯ",
+        "irrigation-benefit1": "ನೀರಿನ ವ್ಯರ್ಥತೆಯನ್ನು ಕಡಿಮೆ ಮಾಡುತ್ತದೆ",
+        "irrigation-benefit2": "ಹೆಚ್ಚು/ಕಡಿಮೆ ನೀರುಣಿಸುವುದನ್ನು ತಡೆಗಟ್ಟುತ್ತದೆ",
+        "irrigation-benefit3": "ಮಾನ್ಸೂನ್ ಮಾದರಿಗಳಿಗೆ ಹೊಂದಾಣಿಕೆಯಾಗುತ್ತದೆ",
+        "fertilizer-title": "ಗೊಬ್ಬರ ಅತ್ಯುತ್ತಮಗೊಳಿಸುವಿಕೆ",
+        "fertilizer-desc": "ಮಣ್ಣಿನ ಪರೀಕ್ಷೆಗಳು ಮತ್ತು ಬೆಳೆ ಬೆಳವಣಿಗೆಯ ಹಂತದ ಆಧಾರದ ಮೇಲೆ ನಿಖರವಾದ NPK ಅನುಪಾತಗಳನ್ನು ಯಂತ್ರ ಕಲಿಕೆ ಶಿಫಾರಸು ಮಾಡುತ್ತದೆ",
+        "fertilizer-badge": "₹2000/ಎಕರೆ ಉಳಿತಾಯ",
+        "fertilizer-benefit1": "ಇನ್ಪುಟ್ ವೆಚ್ಚವನ್ನು ಕಡಿಮೆ ಮಾಡುತ್ತದೆ",
+        "fertilizer-benefit2": "ಮಣ್ಣಿನ ಅವನತಿಯನ್ನು ತಡೆಗಟ್ಟುತ್ತದೆ",
+        "fertilizer-benefit3": "ಹವಾಮಾನದ ಆಧಾರದ ಮೇಲೆ ಸಮಯ",
+        "pest-title": "ಕೀಟ ಮತ್ತು ರೋಗ ಪತ್ತೆ",
+        "pest-desc": "ಕ್ಷೇತ್ರ ಫೋಟೋಗಳು ಮತ್ತು ಉಪಗ್ರಹ ಸಸ್ಯಸಂಪತ್ತು ಸೂಚ್ಯಂಕಗಳಿಂದ ಬೆದರಿಕೆಗಳನ್ನು ಕಂಪ್ಯೂಟರ್ ವಿಷನ್ ಗುರುತಿಸುತ್ತದೆ",
+        "pest-badge": "ಮುಂಚಿತ ಎಚ್ಚರಿಕೆ",
+        "pest-benefit1": "7-ದಿನ ಮುಂಚಿತ ಎಚ್ಚರಿಕೆ",
+        "pest-benefit2": "ಸಾವಯವ ಚಿಕಿತ್ಸಾ ಆಯ್ಕೆಗಳು",
+        "pest-benefit3": "ಸ್ಥಳ-ನಿರ್ದಿಷ್ಟ ಸಲಹೆ",
+        
+        // How It Works
+        "howitworks-title": "ಕೃಷಿಮಿತ್ರ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ",
+        "step1-title": "ಉಪಗ್ರಹ ಡೇಟಾ ಸಂಗ್ರಹ",
+        "step1-desc": "ISRO ಭುವನ್, ಸೆಂಟಿನೆಲ್-2 ಮತ್ತು NASA ಉಪಗ್ರಹಗಳಿಂದ ಸಸ್ಯಸಂಪತ್ತು ಸೂಚ್ಯಂಕಗಳು, ಮಣ್ಣಿನ ತೇವಾಂಶಕ್ಕಾಗಿ ದೈನಂದಿನ ನವೀಕರಣಗಳು",
+        "step2-title": "AI ಸಂಸ್ಕರಣೆ",
+        "step2-desc": "ಯಂತ್ರ ಕಲಿಕೆ ಮಾದರಿಗಳು ರೈತರ ಇನ್ಪುಟ್ಗಳೊಂದಿಗೆ ಡೇಟಾವನ್ನು ವಿಶ್ಲೇಷಿಸಿ ವೈಯಕ್ತಿಕ ಶಿಫಾರಸುಗಳನ್ನು ಉತ್ಪಾದಿಸುತ್ತವೆ",
+        "step3-title": "ರೈತ ವಿತರಣೆ",
+        "step3-desc": "ಸರಳ ಸೂಚನೆಗಳೊಂದಿಗೆ ಸ್ಥಳೀಯ ಭಾಷೆಯಲ್ಲಿ SMS/WhatsApp ಮೂಲಕ ಕ್ರಿಯಾತ್ಮಕ ಎಚ್ಚರಿಕೆಗಳು",
+        
+        // Impact
+        "impact-title": "ಭಾರತೀಯ ರೈತರಿಗೆ ಸಾಬೀತಾದ ಪರಿಣಾಮ",
+        "impact1": "ನೀರಿನ ಉಳಿತಾಯ",
+        "impact2": "ಫಸಲು ಹೆಚ್ಚಳ",
+        "impact3": "ಇನ್ಪುಟ್ ವೆಚ್ಚ ಕಡಿಮೆ",
+        "impact4": "ರೈತರಿಗೆ ಸೇವೆ ಸಲ್ಲಿಸಲಾಗಿದೆ",
+        
+        // Testimonials
+        "testimonials-title": "ರೈತರು ಏನು ಹೇಳುತ್ತಾರೆ",
+        "testimonial1": "\"ಕೃಷಿಮಿತ್ರದ SMS ಎಚ್ಚರಿಕೆಗಳು ನನ್ನ ಗೋಧಿ ಫಸಲನ್ನು ಹೆಚ್ಚಿಸುವಾಗ ಗೊಬ್ಬರ ಬಳಕೆಯನ್ನು 25% ಕಡಿಮೆ ಮಾಡಲು ನನಗೆ ಸಹಾಯ ಮಾಡಿದವು\"",
+        "farmer1": "ಗೋಧಿ ರೈತ, ಪಂಜಾಬ್",
+        "testimonial2": "\"ಕೀಟ ಎಚ್ಚರಿಕೆಗಳು ನನ್ನ ಹತ್ತಿ ಜಮೀನಿನಲ್ಲಿ ಏನನ್ನೂ ಗಮನಿಸುವ 10 ದಿನಗಳ ಮೊದಲು ಬಂದವು. ನನ್ನ ಬೆಳೆಯನ್ನು ಉಳಿಸಿತು!\"",
+        "farmer2": "ಹತ್ತಿ ರೈತ, ಮಹಾರಾಷ್ಟ್ರ",
+        "testimonial3": "\"ನನ್ನ ಮೂಲ ಫೋನ್ ಇರುವಾಗಲೂ, ನನ್ನ ಅಡಿಕೆ ಗಿಡಗಳಿಗೆ ನಿಖರವಾಗಿ ಯಾವಾಗ ನೀರುಣಿಸಬೇಕು ಎಂದು ನನಗೆ ಕನ್ನಡ ಸಂದೇಶಗಳು ಬರುತ್ತವೆ\"",
+        "farmer3": "ಅಡಿಕೆ ರೈತ, ಕರ್ನಾಟಕ",
+        
+        // CTA
+        "cta-title": "ನಿಮ್ಮ ಕೃಷಿಯನ್ನು ಪರಿವರ್ತಿಸಲು ಸಿದ್ಧರಿದ್ದೀರಾ?",
+        "cta-subtitle": "50,000+ ಭಾರತೀಯ ರೈತರೊಂದಿಗೆ ಸೇರಿಕೊಳ್ಳಿ ಉತ್ತಮ ಇಳುವರಿ ಮತ್ತು ಕಡಿಮೆ ವೆಚ್ಚಕ್ಕಾಗಿ AI ಬಳಸುತ್ತಿದ್ದಾರೆ",
+        "cta-register": "ಈಗ ನೋಂದಾಯಿಸಿ",
+        "cta-call": "ನಮಗೆ ಕರೆ ಮಾಡಿ: 1800-123-4567",
+        
+        // Footer
+        "footer-brand": "ಕೃಷಿಮಿತ್ರ",
+        "footer-desc": "ಭಾರತದ ಸಣ್ಣ ರೈತರಿಗೆ AI-ಚಾಲಿತ ನಿಖರ ಕೃಷಿ ವೇದಿಕೆ",
+        "footer-solutions": "ಪರಿಹಾರಗಳು",
+        "footer-sol1": "ನಿಖರ ನೀರಾವರಿ",
+        "footer-sol2": "ಗೊಬ್ಬರ ಅತ್ಯುತ್ತಮಗೊಳಿಸುವಿಕೆ",
+        "footer-sol3": "ಕೀಟ ಪತ್ತೆ",
+        "footer-sol4": "ಬೆಳೆ ಆರೋಗ್ಯ",
+        "footer-crops": "ಬೆಳೆಗಳು",
+        "footer-crop1": "ಭತ್ತ",
+        "footer-crop2": "ಗೋಧಿ",
+        "footer-crop3": "ಹತ್ತಿ",
+        "footer-crop4": "ಅಡಿಕೆ",
+        "footer-contact": "ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ",
+        "footer-address": "ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ",
+        "footer-phone": "1800-123-4567 (ಟೋಲ್ ಫ್ರೀ)",
+        "footer-copyright": "© 2023 ಕೃಷಿಮಿತ್ರ. ಎಲ್ಲ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲ್ಪಟ್ಟಿವೆ.",
+        "footer-privacy": "ಗೌಪ್ಯತಾ ನೀತಿ",
+        "footer-terms": "ಸೇವಾ ನಿಯಮಗಳು",
+        
+        // Login Modal
+        "modal-login-title": "ರೈತ ಲಾಗಿನ್",
+        "modal-mobile": "ಮೊಬೈಲ್ ನಂಬರ್",
+        "modal-password": "ಪಾಸ್ವರ್ಡ್",
+        "modal-login-btn": "ಲಾಗಿನ್",
+        "modal-forgot": "ಪಾಸ್ವರ್ಡ್ ಮರೆತಿರಾ?",
+        "modal-noaccount": "ಕೃಷಿಮಿತ್ರಕ್ಕೆ ಹೊಸದಾಗಿ ಬಂದಿದ್ದೀರಾ?",
+        "modal-register-link": "ಇಲ್ಲಿ ನೋಂದಾಯಿಸಿ",
+        
+        // Registration Modal
+        "modal-register-title": "ಹೊಸ ರೈತ ನೋಂದಣಿ",
+        "modal-name": "ಪೂರ್ಣ ಹೆಸರು",
+        "modal-state": "ರಾಜ್ಯ",
+        "modal-select-state": "ರಾಜ್ಯವನ್ನು ಆರಿಸಿ",
+        "state-ka": "ಕರ್ನಾಟಕ",
+        "state-mh": "ಮಹಾರಾಷ್ಟ್ರ",
+        "state-pb": "ಪಂಜಾಬ್",
+        "state-up": "ಉತ್ತರ ಪ್ರದೇಶ",
+        "modal-district": "ಜಿಲ್ಲೆ",
+        "modal-crops": "ಮುಖ್ಯ ಬೆಳೆಗಳು (ಗರಿಷ್ಠ 3 ಆಯ್ಕೆ ಮಾಡಿ)",
+        "crop-rice": "ಭತ್ತ",
+        "crop-wheat": "ಗೋಧಿ",
+        "crop-cotton": "ಹತ್ತಿ",
+        "crop-areca": "ಅಡಿಕೆ",
+        "crop-sugarcane": "ಕಬ್ಬು",
+        "modal-register-btn": "ಈಗ ನೋಂದಾಯಿಸಿ",
+        "modal-terms": "ನೋಂದಣಿ ಮಾಡುವ ಮೂಲಕ, ನೀವು ನಮ್ಮ ಸೇವಾ ನಿಯಮಗಳು ಮತ್ತು ಗೌಪ್ಯತಾ ನೀತಿಗೆ ಸಮ್ಮತಿಸುತ್ತೀರಿ",
+        "modal-haveaccount": "ಈಗಾಗಲೇ ಖಾತೆ ಇದೆಯೇ?",
+        "modal-login-link": "ಇಲ್ಲಿ ಲಾಗಿನ್ ಮಾಡಿ"
+      }
+    };
+
+    // Language switcher functionality
+    document.querySelectorAll('[data-lang]').forEach(item => {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        const lang = this.getAttribute('data-lang');
+        document.querySelector('.dropdown-toggle .lang-current').textContent = this.textContent;
+        translatePage(lang);
+      });
+    });
+
+    // Also translate when language buttons are clicked in footer
+    document.querySelectorAll('.lang-en-btn, .lang-hi-btn, .lang-kn-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const lang = this.classList.contains('lang-en-btn') ? 'en' : 
+                     this.classList.contains('lang-hi-btn') ? 'hi' : 'kn';
+        document.querySelector('.dropdown-toggle .lang-current').textContent = 
+          lang === 'en' ? 'English' : lang === 'hi' ? 'हिन्दी' : 'ಕನ್ನಡ';
+        translatePage(lang);
+      });
+    });
+
+    function translatePage(lang) {
+      // Update all elements with lang-* classes
+      document.querySelectorAll('[class*="lang-"]').forEach(element => {
+        const classes = element.className.split(' ');
+        classes.forEach(cls => {
+          if (cls.startsWith('lang-') && !cls.startsWith('lang-placeholder')) {
+            const translationKey = cls.replace('lang-', '');
+            if (translations[lang][translationKey]) {
+              if (element.tagName === 'INPUT' && element.placeholder) {
+                element.placeholder = translations[lang][translationKey];
+              } else if (element.tagName === 'OPTION') {
+                element.textContent = translations[lang][translationKey];
+              } else {
+                element.textContent = translations[lang][translationKey];
+              }
+            }
+          }
+        });
+      });
+      
+      // Update select options that need translation
+      const stateOptions = {
+        'KA': 'state-ka',
+        'MH': 'state-mh',
+        'PB': 'state-pb',
+        'UP': 'state-up'
+      };
+      
+      document.querySelectorAll('#regState option').forEach(option => {
+        if (stateOptions[option.value]) {
+          option.textContent = translations[lang][stateOptions[option.value]];
+        }
+      });
+      
+      document.querySelector('#regState option[value=""]').textContent = 
+        translations[lang]['modal-select-state'];
+    }
+
+    // Initialize with English
+    translatePage('en');
+    
+    // Handle modal transitions between login and register
+    document.querySelectorAll('[data-bs-target="#registerModal"]').forEach(el => {
+      el.addEventListener('click', function() {
+        const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+        if (loginModal) loginModal.hide();
+      });
+    });
+    
+    document.querySelectorAll('[data-bs-target="#loginModal"]').forEach(el => {
+      el.addEventListener('click', function() {
+        const registerModal = bootstrap.Modal.getInstance(document.getElementById('registerModal'));
+        if (registerModal) registerModal.hide();
+      });
+    });
+
+    // Registration form crops selection limit
+    document.getElementById('regCrops').addEventListener('change', function() {
+      if(this.selectedOptions.length > 3) {
+        alert(translations[document.querySelector('#languageSelect').value]['modal-crop-limit'] || 'Please select maximum 3 main crops');
+        this.selectedIndex = -1;
+      }
+    });
+
+  </script>
+</body>
+</html>
